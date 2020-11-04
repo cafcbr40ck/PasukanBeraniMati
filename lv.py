@@ -351,7 +351,7 @@ def robot(url):
 def main():
     list = open(sys.argv[1], 'r').readlines()
     try:
-        ThreadPool = Pool(10)
+        ThreadPool = Pool(20)
         ThreadPool.map(robot, list)
     except:
         pass
